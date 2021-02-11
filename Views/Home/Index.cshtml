@@ -1,0 +1,21 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewBag.Title = "Welcome";
+}
+<!--This is the home page.-->
+<div class="text-center">
+    <h4>
+        This site shows my favorite
+        restaurants in Provo. Yum!
+    </h4>
+</div>
+<div class="text-center">
+    <img src="~/img/junk-food-1.webp" width="500" / class="rounded">
+</div>
+<br />
+<!--This page has two buttons. One will show the list of best restaurants, and the other takes the user
+    to the user submission page-->
+<div class="text-center">
+    <a class="btn btn-primary" asp-action="FoodList">View the List</a>
+    <a class="btn btn-primary" asp-action="SubmissionForm">Submit Your Own</a>
+</div>

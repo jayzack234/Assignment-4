@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Thank you for your submission.";
+}
+
+<!--This page will act as an intermediary between the submission page and food displayed page-->
+<!--This makes sure we are accessing the proper models and therefore the proper information submitted-->
+@model Assignment_4.Models.FoodResponse
+
+<div class="text-sm-center">
+    <h2>Click the link below to see user submissions.</h2>
+</div>
+
+<div class="text-center">
+    <a asp-action="Output2">User Submissions</a>
+</div>
+

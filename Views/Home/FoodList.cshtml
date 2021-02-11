@@ -1,0 +1,31 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewBag.Title = "Best Restaurants in Provo";
+}
+
+@model IEnumerable<string>
+
+<!--This page will display the best food restaurants in Provo as they are found in the Food.cs model-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurants</title>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+    <header>
+        <h4 class="bg-primary text-white text-center">Like food? Me too. These are the best in Provo, along with its best dish, address, phone number, and website.</h4>
+    </header>
+    <div class="list-group">
+        <ul>
+            <!--We take here what was passed in the view parameter from the HomeController
+            Then for each entry in the model, print out a new list item-->
+            @foreach (string i in Model)
+            {
+                <li class="list-group-item">@i</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

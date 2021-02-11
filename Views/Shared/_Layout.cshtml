@@ -1,0 +1,33 @@
+﻿<!--This page will act as the template.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food in Provo</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--This home link will act as the shared navigation-->
+    <div class="bg-light text-capitalize popover-header">
+        <header>
+            <menu>
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                </ul>
+            </menu>
+        </header>
+    </div>
+    <div class="text-center">
+        <h1>@ViewBag.Title</h1>
+    </div>
+    <!--Here, the content of other pages will load. Meaning every page will share this common header and footer-->
+    @RenderBody()
+    <br />
+    <div class="text-center text-monospace card-footer">
+        <footer>Copyright 2021</footer>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "User Submissions";
+}
+
+<!--This page will display the submitted information on the submissionform page-->
+@model IEnumerable<Assignment_4.Models.FoodResponse>
+<br />
+<!--Below, I create a table to house the data -->
+<div align="center" class="table-bordered table">
+    <table>
+        <thead>
+                <tr><th>Name</th><th>RestaurantName</th><th>FavoriteDish</th><th>RestaurantPhone</th>
+        </thead>
+        <tbody>
+            <!--I populate the table using a loop and the information as found in the hold page-->
+            @foreach (Assignment_4.Models.FoodResponse x in Model)
+            {
+                <tr>
+                    <td>@x.Name</td>
+                    <td>@x.RestaurantName</td>
+                    <td>@x.FavoriteDish</td>
+                    <td>@x.RestaurantPhone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<br />
+<div class="text-center">
+    <a class="btn btn-primary" asp-action="SubmissionForm">Submit Another</a>
+</div>
